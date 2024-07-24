@@ -162,9 +162,9 @@ counts <- GetAssayData(seu_rnaqcd, assay = 'RNA', layer = 'counts')
 mdata <- seu_rnaqcd$orig.ident
 rm(seu_rnaqcd)
 seu_rnaqcd <- CreateSeuratObject(counts = counts, assay = 'RNA', min.cells = 50)
-dim(seu_rnaqcd)
+
 seu_rnaqcd <-  AddMetaData(seu_rnaqcd, metadata = mdata, col.name = 'Samples')
-dim(seu_rnaqcd)
+
 
 ALs <- grep('^AL[0-9]',rownames(seu_rnaqcd),value = TRUE)
 ACs <- grep('^AC[0-9]',rownames(seu_rnaqcd),value = TRUE)
@@ -180,6 +180,7 @@ gtr <- c('MALAT1','HBB','IGKC', ALs, ACs, ADs,MTs,APs,EFs,LINCs)
 
 idx <- which(rownames(seu_rnaqcd)%in%gtr)
 seu_rnaqcd <- seu_rnaqcd[-idx,]
+dim(seu_rnaqcd)
 
 #compare 3 different normalization only on RNA data
 TCs <- seu_rnaqcd
@@ -210,7 +211,7 @@ plot_sct <- ggplot(plot_data_sct, aes(x = Samples, y = NormalizedDepth)) +
   geom_boxplot() +
   stat_summary(fun = median, geom = "text", aes(label = format(..y.., digits = 2, nsmall = 2)), vjust = -0.5, color = 'cyan3', size = 3.5) +
   theme_minimal() +
-  labs(title = "Normalized Sequencing Depth: SCTransform", x = "", y = ")") +
+  labs(title = "Normalized Sequencing Depth: SCTransform", x = "", y = "") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 plot_log <- ggplot(plot_data_log, aes(x = Samples, y = NormalizedDepth)) +
@@ -288,5 +289,3 @@ dim(pbmc)
 
 rm(list=setdiff(ls(), c('Seu', 'samp_cols')))
 gc()
-
-save.image("~/Sandbox/multiome_8samples.RData")
