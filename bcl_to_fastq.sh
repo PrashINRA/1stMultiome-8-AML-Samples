@@ -15,6 +15,9 @@ else
     echo "cellranger-arc mkfastq completed successfully."
 fi
 
+#This is the shell script to generate demultilexed fastq files using bcl2 files using cell ranger-arc 
+
+#Load modules
 module load cellranger/arc-2.0.0
 
 export PATH=/trinity/home/psingh/usr/local/bin:$PATH
