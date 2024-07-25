@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Scripts to count reads per samples using fastq files
 # Define the path to your FASTQ folder
 fastq_path="/net/beegfs/scratch/psingh/Multiome10x_June2024/GEX/data/FR34156623_10x-GEX-Library/B22KLCKLT3/"
 
