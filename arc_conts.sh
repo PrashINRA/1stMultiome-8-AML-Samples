@@ -10,6 +10,7 @@
 #SBATCH --mail-type=END,FAIL           # Notifications for job done & fail
 #SBATCH --mail-user=p.singh2@amsterdamumc.nl # Replace with your email
 
+#This is the shell script to generate count matix for RNA and ATAC using cellranger-arc
 # Load the cellranger-arc module
 module load cellranger/arc-2.0.0
 
