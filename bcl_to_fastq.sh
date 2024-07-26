@@ -17,9 +17,12 @@ module load cellranger/arc-2.0.0
 
 export PATH=/trinity/home/psingh/usr/local/bin:$PATH
 
-BCL_PATH="/net/beegfs/scratch/psingh/240514_VH00563_167_AACHTM5HV/"
-SAMPLESHEET_PATH="/trinity/home/psingh/SampleSheets/atac.csv"
+BCL_PATH="/net/beegfs/scratch/psingh/240514_VH00563_167_AACHTM5HV/" #Path to .bcl files
+SAMPLESHEET_PATH="/trinity/home/psingh/SampleSheets/atac.csv"  #Prepare the samplesheet 1st
 OUTPUT_DIR="/net/beegfs/scratch/psingh/240514_VH00563_167_AACHTM5HV/Data/atac-fastqs"
 
-cellranger-arc mkfastq --run="$BCL_PATH" --csv="$SAMPLESHEET_PATH" --output-dir="$OUTPUT_DIR" --localcores=20 --localmem=200
+cellranger-arc mkfastq --run="$BCL_PATH" --csv="$SAMPLESHEET_PATH" 
+--output-dir="$OUTPUT_DIR" 
+--localcores=40 
+--localmem=200
 
