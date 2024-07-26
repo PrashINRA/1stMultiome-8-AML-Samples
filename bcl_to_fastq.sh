@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#This is the shell script to generate demultilexed fastq files using bcl2 files using cellranger-arc
+
 #SBATCH --job-name=cellranger_arc_mkfastq
 #SBATCH --output=cellranger_arc_mkfastq_%j.out
 #SBATCH --error=cellranger_arc_mkfastq_%j.err
@@ -8,14 +11,6 @@
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=prashnitrr@gmail.com
 
-# Check the exit status of the last command
-if [ $? -ne 0 ]; then
-    echo "cellranger-arc mkfastq failed with an error."
-else
-    echo "cellranger-arc mkfastq completed successfully."
-fi
-
-#This is the shell script to generate demultilexed fastq files using bcl2 files using cell ranger-arc 
 
 #Load modules
 module load cellranger/arc-2.0.0
