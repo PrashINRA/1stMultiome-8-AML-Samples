@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#This is the shell script to generate a count matrix for RNA and ATAC using cellranger-arc
+
 #SBATCH --job-name=cellranger-arc-count
 #SBATCH --output=%x_%j.out
 #SBATCH --error=%x_%j.err
@@ -10,7 +13,7 @@
 #SBATCH --mail-type=END,FAIL           # Notifications for job done & fail
 #SBATCH --mail-user=p.singh2@amsterdamumc.nl # Replace with your email
 
-#This is the shell script to generate count matix for RNA and ATAC using cellranger-arc
+
 # Load the cellranger-arc module
 module load cellranger/arc-2.0.0
 
@@ -48,9 +51,6 @@ for i in "${!samples[@]}"; do
                        --libraries=$csv_file \
                        --reference="/trinity/home/psingh/Refs/refdata-cellranger-arc-GRCh38-2020-A-2.0.0" \
                        --no-bam \
-		       --min-gex-count=500 \
-                       --min-atac-count=200 \
-		       --gex-exclude-introns \
                        --localmem=300 \
                        --localcores=40
 done
