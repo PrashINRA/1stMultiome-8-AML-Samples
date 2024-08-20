@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=20
 #SBATCH --mem=200G  # Increased memory allocation 
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=prashnitrr@gmail.com
+#SBATCH --mail-user=p.singh2@amsterdamumc.nl
 
 
 #Load modules
