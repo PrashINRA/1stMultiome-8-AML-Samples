@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#This is the shell script to generate demultilexed fastq files using bcl2 files using cellranger-arc
+#This is the shell script to generate demultiplexed fastq files using bcl2 files using cellranger-arc
 
 #SBATCH --job-name=cellranger_arc_mkfastq
 #SBATCH --output=cellranger_arc_mkfastq_%j.out
