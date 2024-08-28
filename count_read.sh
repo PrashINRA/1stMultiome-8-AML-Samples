@@ -1,6 +1,15 @@
 #!/bin/bash
 
 #Scripts to count reads per samples using fastq files
+#SBATCH --job-name=cellranger_arc_mkfastq
+#SBATCH --output=cellranger_arc_mkfastq_%j.out
+#SBATCH --error=cellranger_arc_mkfastq_%j.err
+#SBATCH --time=24:00:00
+#SBATCH --cpus-per-task=20
+#SBATCH --mem=200G  # Increased memory allocation 
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=p.singh2@amsterdamumc.nl
+
 
 # Define the path to your FASTQ folder
 fastq_path="/net/beegfs/scratch/psingh/Multiome10x_June2024/GEX/data/FR34156623_10x-GEX-Library/B22KLCKLT3/"
