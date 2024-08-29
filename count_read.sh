@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #Scripts to count reads per samples using fastq files
-#SBATCH --job-name=cellranger_arc_mkfastq
-#SBATCH --output=cellranger_arc_mkfastq_%j.out
-#SBATCH --error=cellranger_arc_mkfastq_%j.err
+#SBATCH --job-name=CountReads
+#SBATCH --output=CountReads.out
+#SBATCH --error=CountReads.err
 #SBATCH --time=24:00:00
 #SBATCH --cpus-per-task=20
 #SBATCH --mem=200G  # Increased memory allocation 
