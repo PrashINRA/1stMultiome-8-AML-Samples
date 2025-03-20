@@ -7,7 +7,7 @@
 #SBATCH --error=cellranger_arc_mkfastq_%j.err
 #SBATCH --time=24:00:00
 #SBATCH --cpus-per-task=20
-#SBATCH --mem=200G  # Increased memory allocation 
+#SBATCH --mem=200G  
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=p.singh2@amsterdamumc.nl
 
