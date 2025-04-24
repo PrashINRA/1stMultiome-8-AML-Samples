@@ -15,7 +15,7 @@
 #Load modules
 module load cellranger/arc-2.0.0
 
-export PATH=/trinity/home/psingh/usr/local/bin:$PATH #Require to invoke illumina's bcl2fastq 
+export PATH=/trinity/home/psingh/usr/local/bin:$PATH #Require to invoke illumina's bcl2fastq, module load bcl2fastq could also work.
 
 BCL_PATH="/net/beegfs/scratch/psingh/240514_VH00563_167_AACHTM5HV/" #Path to .bcl files
 SAMPLESHEET_PATH="/trinity/home/psingh/SampleSheets/atac.csv"  #Prepare the samplesheet 1st
