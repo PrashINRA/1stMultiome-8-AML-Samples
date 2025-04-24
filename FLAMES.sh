@@ -1,4 +1,5 @@
-##This is the script to Run FLAMES pipeline within the singularity container for Rstudio.
+##This is the script to Run FLAMES pipeline (https://changqingw.github.io/IgniteRNAseq/articles/FLAMESWorkflow.html),
+#within the singularity container for Rstudio.
 
 #!/bin/bash
 #SBATCH --job-name=flames_sc_long
